@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-width: 360px;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(69, 252, 210, 1) 50%
+  );
+  background-repeat: no-repeat;
+}
+
+/* NAVBAR STYLING */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+nav a,
+nav i {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+}
+
+ul * {
+  margin-left: 20px;
+}
+
+/* MAIN-CONTAINER  */
+
+.main-container {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* LEFT CONTENT */
+
+.title {
+  width: 400px;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.sub-title {
+  color: grey;
+}
+
+.btn-rating-container,
+.sub-title {
+  margin-top: 30px;
+}
+
+.btn-rating-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+button span::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  transform: rotate(45deg);
+}
+
+.star {
+  color: #f1c40f;
+  background-color: #edecec;
+  border: white 1px solid;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px lightgray;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.rating span:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* RIGHT CONTENT */
+.right-content {
+  text-align: center;
+}
+
+.right-content img {
+  width: 400px;
+}
+
+footer {
+  position: relative;
+  padding: 30px;
+  opacity: 0.5;
+  top: 20px;
+  text-align: end;
+}
+
+@media screen and (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .btn-rating-container {
+    justify-content: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
